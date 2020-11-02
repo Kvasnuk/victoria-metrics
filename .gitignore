@@ -1,0 +1,10 @@
+node_modules
+.idea
+package-lock.json
+*.lock
+npm-debug.log
+.env
+.git
+.history/
+logs/*
+.DS_Store

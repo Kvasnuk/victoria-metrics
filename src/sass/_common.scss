@@ -1,0 +1,146 @@
+html,
+body {
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+a {
+  color: $colorOrange;
+  transition: 300ms;
+
+  &:hover {
+    color: $colorOrangeDark;
+  }
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 7rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.3rem 1.1rem;
+  color: $colorWhite;
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: 300ms;
+  border-radius: 4px;
+  outline: none;
+
+
+
+  &--orange {
+    border: 1px solid $colorOrange;
+    background-color: $colorOrange;
+
+    &:hover {
+      border: 1px solid $colorOrangeDark;
+      color: $colorWhite !important;
+      background-color: $colorOrangeDark;
+    }
+  }
+
+  &--default {
+    border: 1px solid $colorOrange;
+    background: transparent;
+
+    &:hover {
+      background: $colorOrange;
+      color: $colorWhite !important;
+    }
+  }
+
+  &__shadow {
+    &--black {
+      box-shadow: 0px 15px 30px 0px #00000066;
+    }
+
+    &--orange {
+      box-shadow: 0px 10px 20px 0px rgba(255, 92, 0, 0.5);
+    }
+  }
+
+  &__size {
+    &--l {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+  }
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+button.btn {
+  outline: none;
+}
+
+a.link {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $colorOrange;
+  padding-right: 2rem;
+  text-decoration: none;
+
+  &:hover {
+    color: $colorOrangeDark;
+
+    &:after {
+      right: 0.5rem;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform-origin: center;
+    transform: rotate(-45deg);
+    transition: right 300ms;
+  }
+}
+
+.vm-point-list {
+
+  li {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 600;
+    list-style: none;
+    color: $colorWhite;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 15px;
+      height: 15px;
+      display: block;
+      background-image: url(/../img/union.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+}
